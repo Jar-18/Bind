@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src='../js/bind.js'></script>
+	<title>Test1</title>
+</head>
+<body>
+	<p data-bind="output"></p>
+	<script>
+		var data = {
+			output: 'Hello World'
+		}
+		$$.bind(data);
+	</script>
+</body>
+</html>
