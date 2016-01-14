@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src='../js/bind.js'></script>
+	<title>Test1</title>
+</head>
+<body>
+	<p bind="output"></p>
+	<div repeat="record in records">
+		<p bind="record.content"></p>
+		<p bind="record.data"></p>
+	</div>
+
+	<script>
+		var data = {
+			output: 'Hello World',
+			records: [{
+				date: '2015-01-13',
+				content: 'record 1...'
+			}]
+		}
+
+		$$.bind(data);
+	</script>
+</body>
+</html>
