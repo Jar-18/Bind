@@ -10,6 +10,7 @@ var $$ = {
 			}
 		});
 
+		$('[repeated]').remove();
 
 		//Not consider nested loop
 		$('[repeat]').each(function() {
@@ -20,6 +21,9 @@ var $$ = {
 
 			//Because jquery after method will put the latter before
 			arr.reverse();
+
+			//Repeated nodes will clone this node
+			$(this).css('display', '');
 
 			for(let i = 0;i < arr.length;i++) {
 				var clonedNode = $(this).clone();
