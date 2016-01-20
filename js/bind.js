@@ -19,13 +19,10 @@ var $$ = {
 			var iter = params[0];
 			var arr = data[params[2]];
 
-			//Because jquery after method will put the latter before
-			arr.reverse();
-
 			//Repeated nodes will clone this node
 			$(this).css('display', '');
 
-			for(let i = 0;i < arr.length;i++) {
+			for(let i = arr.length - 1;i >= 0;i--) {
 				var clonedNode = $(this).clone();
 				clonedNode.removeAttr('repeat');
 				//Make it easy to find to remove
